@@ -6,10 +6,10 @@
 
 ##  주요 기능
 
-- ✅ 사용자의 질문을 OpenAI Embedding API를 통해 벡터화
-- ✅ Qdrant에 저장된 판례 벡터들과 유사도 기반 검색
-- ✅ 검색된 유사 판례들을 GPT 프롬프트에 포함해 요약 및 법률적 판단 제공
-- ✅ REST API(`/search`)로 질문 → 결과 반환까지 처리
+- 사용자의 질문을 OpenAI Embedding API를 통해 벡터화
+- Qdrant에 저장된 판례 벡터들과 유사도 기반 검색
+- 검색된 유사 판례들을 GPT 프롬프트에 포함해 요약 및 법률적 판단 제공
+- REST API(`/search`)로 질문 → 결과 반환까지 처리
 
 ---
 
@@ -45,7 +45,7 @@
 
 `http://localhost:8080/sign`
 
-## @RequestBody
+#### @RequestBody
 
 ```json
 {
@@ -54,7 +54,7 @@
 }
 ```
 
-## @ResponseBody
+#### @ResponseBody
 
 ```json
 {
@@ -66,7 +66,7 @@
 
 `http://localhost:8080/login`
 
-## @RequestBody
+#### @RequestBody
 
 ```json
 {
@@ -75,7 +75,7 @@
 }
 ```
 
-## @ResponseBody
+#### @ResponseBody
 
 ```json
 {
@@ -86,20 +86,18 @@
 
 - 응답으로 JWT 토큰을 발급해줌. 로그인 회원가입 외의 API 요청에는 반드시 포함시킬 것
 
-![image.png](attachment:f9026eae-0197-40b9-a575-1d9738b66444:image.png)
-
 
 ## AI 법률 판결
 
 `http://localhost:8080/chat?prompt=모르는 사람이 따라옴`
 
-## @RequestBody
+#### @RequestBody
 
 ```json
 // empty
 ```
 
-## @ResponseBody
+#### @ResponseBody
 
 ```json
 {
@@ -119,17 +117,11 @@
 - 개인정보 침해
 - 지속성 반복성
 
-출력 결과 - postman
-
-![image.png](attachment:ea0b3f0d-59f0-4e8c-b040-6cf031502995:image.png)
-
-
-
 ## 유사 판례 조회
 
 `http://localhost:8080/search/simple`
 
-## @RequestBody
+#### @RequestBody
 
 ```jsx
 {
@@ -137,7 +129,7 @@
 }
 ```
 
-## @ResponseBody
+#### @ResponseBody
 
 ```jsx
 [
@@ -155,13 +147,13 @@
 
 `http://localhost:8080/supports/1`
 
-## @RequestBody
+#### @RequestBody
 
 ```json
 // empty
 ```
 
-## @ResponseBody
+#### @ResponseBody
 
 ```json
 {
@@ -172,19 +164,17 @@
 }
 ```
 
-![image.png](attachment:e43b38c4-aa3b-4f1b-b815-97e7b265368b:image.png)
-
 ## 지원 제도 조회(상세)
 
 `http://localhost:8080/detail/1`
 
-## @RequestBody
+#### @RequestBody
 
 ```json
 
 ```
 
-## @ResponseBody
+#### @ResponseBody
 
 ```json
 {
